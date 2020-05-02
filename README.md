@@ -48,3 +48,17 @@ json_obj = json_from_str('{"a":2, "b":3}')
 # JSONをstr型文字列に変換
 json_text = json_to_str(json_obj)
 ```
+
+### contimg
+
+- 画像ファイルを扱う
+
+```python
+from reelib import contimg
+
+# PIL型をOpenCV型に変換
+img_cv = contimg.pil2cv(img_pil)
+
+# OpenCV型をPIL型に変換
+img_pil = contimg.cv2pil(img_cv)
+```
