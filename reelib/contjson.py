@@ -33,4 +33,4 @@ def json_from_str(text):
 def json_to_str(json_obj):
     """JSONをstr型へ変換"""
 
-    return json.dumps(json_obj, ensure_ascii=False)
+    return json.dumps(json_obj, separators=(",", ":"), ensure_ascii=False)
