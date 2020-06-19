@@ -74,7 +74,7 @@ def get_imagetile(img_path_list, img_size, img_num, fill=True):
     size_x, size_y = img_size
     num_x, num_y = img_num
 
-    if len(img_path_list) >= num_x * num_y:
+    if len(img_path_list) > num_x * num_y:
         imgs = sorted(random.sample(img_path_list, num_x * num_y))
     else:
         imgs = sorted(img_path_list)
@@ -85,7 +85,7 @@ def get_imagetile(img_path_list, img_size, img_num, fill=True):
         f = cv2.imread(img)
         f = resize(f, img_size, fill=fill)
         x = i % num_x
-        y = i // num_y
+        y = i // num_x
         frame[size_y * y : size_y * (y + 1), size_x * x : size_x * (x + 1)] = f
 
     return frame

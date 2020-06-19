@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "reelib"
-version = "1.3.1"
+version = "1.3.2"
 description = "頻繁に利用する処理を集めたライブラリ"
 readme="README.md"
 authors = ["reeve0930 <reeve0930@gmail.com>"]
