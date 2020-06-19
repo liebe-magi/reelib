@@ -61,4 +61,13 @@ img_cv = contimg.pil2cv(img_pil)
 
 # OpenCV型をPIL型に変換
 img_pil = contimg.cv2pil(img_cv)
+
+# 画像のリサイズ (トリミング)
+resized = contimg.resize(img_cv, (画像のサイズ(x,yのtuple)), fill=False)
+
+# 画像のリサイズ (パディング)
+resized = contimg.resize(img_cv, (画像のサイズ(x,yのtuple)), fill=True)
+
+# 画像タイルの作成
+img_tile = contimg.get_imagetile((画像パスのリスト), (タイルのサイズ(x,yのtuple)), (タイルの数(x,yのtuple)))
 ```
